@@ -1,0 +1,60 @@
+.opponent-cards,
+.your-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.opponent-cards img,
+.your-cards img {
+  display: block;
+  width: 100px;
+  height: 130px;
+  background-color: white;
+  z-index: 100;
+  margin: 10px;
+  border-radius: 10px;
+  border: 2px solid grey;
+}
+
+.decision-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.next-card,
+.stop-game {
+  width: 150px;
+  height: 30px;
+  margin: 10px;
+  border-radius: 20px;
+  background-color: rgb(73, 128, 223);
+}
+
+.next-card:hover,
+.stop-game:hover {
+  background-color: rgb(103, 152, 238);
+}
+
+.next-card:active,
+.stop-game:active {
+  background-color: rgb(16, 95, 231);
+}
+
+.game-field {
+  text-align: center;
+}
+
+.central-paper {
+  background-image: url(../../../assets/img/paper_h.png);
+  background-size: cover;
+  text-align: center;
+  width: 450px;
+  height: 300px;
+}
+
+.game-welcome h1 {
+  margin: 40px;
+  font-size: 36px;
+}

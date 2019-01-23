@@ -1,0 +1,43 @@
+<section class="game-field">
+  <div class="opponent-field">
+    <p *ngIf="gameInProgress">
+      Opponent cards
+    </p>
+
+    <div class="opponent-cards">
+      <img *ngFor="let card of cardsPlayerTwo" [src]="gameInProgress ? card.back : card.face" />
+    </div>
+
+  </div>
+
+  <div class="decision-buttons">
+    <button class="next-card" *ngIf="gameInProgress" (click)="cardTaken.emit()">
+      Pick a card
+    </button>
+
+    <div class="central-paper">
+      <div class="game-welcome">
+        <h1>
+          Welcome <br />
+          to Black Jack game!
+        </h1>
+
+        <p>Good luck!</p>
+      </div>
+    </div>
+
+    <button class="stop-game" *ngIf="gameInProgress" (click)="gameStopped.emit()">
+      Stop
+    </button>
+  </div>
+
+  <div class="your-field">
+    <p *ngIf="gameInProgress">
+      Your cards
+    </p>
+
+    <div class="your-cards">
+      <img *ngFor="let card of cardsPlayerOne" [src]="card.face" />
+    </div>
+  </div>
+</section>

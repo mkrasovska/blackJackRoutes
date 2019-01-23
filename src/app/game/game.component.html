@@ -1,0 +1,15 @@
+<div class="main-container">
+  <app-sidebar [allMessages]="allMessages"
+               [scorePlayerOne]=playerOne.score
+               [scorePlayerTwo]=playerTwo.score
+               [gameInProgress]="gameInProgress"
+               (gameStarted)="blackJackInit()">
+  </app-sidebar>
+
+  <app-field (cardTaken)="nextRound()"
+             [cardsPlayerOne]="playerOne.cards"
+             [cardsPlayerTwo]="playerTwo.cards"
+             [gameInProgress]="gameInProgress"
+             (gameStopped)="stopGame()">
+  </app-field>
+</div>

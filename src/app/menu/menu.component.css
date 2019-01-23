@@ -1,0 +1,32 @@
+.main-container {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: green;
+  text-align: center;
+  padding-top: 200px;
+}
+
+.menu-button {
+  border: 1px solid gray;
+  border-radius: 20px;
+  display: inline-block;
+  width: 100px;
+  background-color: rgb(73, 128, 223);
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 5px 15px;
+}
+
+.menu-button:not(:last-child) {
+  margin-right: 20px;
+}
+
+  .menu-button:hover {
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    background: rgb(103, 152, 238);
+  }

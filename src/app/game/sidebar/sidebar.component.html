@@ -1,0 +1,24 @@
+<section class="side-bar">
+  <button class="new-game" (click)="gameStarted.emit()">
+    New game
+  </button>
+
+  <div class="game-log">
+    <h2>Game Log </h2>
+
+    <p *ngFor="let message of allMessages">
+      {{ message }}
+    </p>
+
+  </div>
+
+  <div *ngIf="!gameInProgress" class="game-score">
+
+    <h2>Game score:</h2>
+
+    <p>You: {{scorePlayerOne}}</p>
+
+    <p>Dealer: {{scorePlayerTwo}}</p>
+  </div>
+
+</section>
